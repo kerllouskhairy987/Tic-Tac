@@ -1,0 +1,25 @@
+#register_submit{
+    bottom: 70px;
+}
+
+.overlay_register{
+    padding-top: 220px;
+}
+
+@media(max-width : 974px){
+    .content_register{
+        height: 850px;
+    }
+
+    .oplayer{
+        margin-bottom: 100px;
+    }
+
+    #register_submit{
+        bottom: 30px;
+    }
+
+    .overlay_register{
+        padding-top: 150px;
+    }
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIC TAC</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <a href="index.html">
+                <h3>Tic<span>Tac</span></h3>
+            </a>
+            <div class="sign">
+                <a href="register.html" id="signUp">SignUp</a>
+                <a href="login.html" id="signIn">SignIn</a>
+            </div>
+            <div class="out">
+                <a href="index.html" id="logout" onclick="logout()">LogOut</a>
+            </div>
+        </div>
+        <div class="info_player">
+            <div class="info_playerX">
+                <div id="nameX"></div>
+                <div id="photoX"><img src=""></div>
+                <div id="scoreX"></div>
+            </div>
+
+            <div class="info_playerO">
+                <div id="scoreO"></div>
+                <div id="photoO"><img src=""></div>
+                <div id="nameO"></div>
+            </div>
+        </div>
+        <p class="who"><span class="title"></span></p>
+        <div class="card">
+            <div class="box" id="item1" onclick="game(this.id)"></div>
+            <div class="box" id="item2" onclick="game(this.id)"></div>
+            <div class="box" id="item3" onclick="game(this.id)"></div>
+            <div class="box" id="item4" onclick="game(this.id)"></div>
+            <div class="box" id="item5" onclick="game(this.id)"></div>
+            <div class="box" id="item6" onclick="game(this.id)"></div>
+            <div class="box" id="item7" onclick="game(this.id)"></div>
+            <div class="box" id="item8" onclick="game(this.id)"></div>
+            <div class="box" id="item9" onclick="game(this.id)"></div>
+        </div>
+    </div>
+
+    <div class="notification">
+        <p>congratulation <span class="title2"></span></p>
+        <button class="again">play again</button>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

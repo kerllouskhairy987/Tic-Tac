@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>register | page</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/register.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div class="header">
+        <a href="index.html">
+            <h3>Tic<span>Tac</span></h3>
+        </a>
+        <div class="sign">
+            <a href="register.html" id="signUp">SignUp</a>
+            <a href="login.html" id="signIn">SignIn</a>
+        </div>
+    </div>
+    <div class="content_register">
+        <div class="overlay_register">
+            <div class="xplayer">
+                <h2><span>X</span> player</h2>
+                <div class="content_info">
+                    <div class="img">
+                        <label for="x_imge" onclick="XX()">
+                            <input type="file" id="x_imge" style="display: none;">
+                            <img src="" alt="" id="profileX">
+                            <img class="absolute" src="images/nextProfile.jpeg" alt="profile">
+                        </label>
+                    </div>
+
+                    <div class="info">
+                        <input placeholder="Enter your username ..." type="text" id="usernameX">
+                        <input placeholder="Enter your email ..." type="email" id="emailX">
+                        <input placeholder="Enter your password ..." type="password" id="passwordX">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="oplayer">
+                <h2><span>O</span> player</h2>
+                <div class="content_info">
+                    <div class="img">
+                        <label for="o_imge" onclick="OO()">
+                            <input type="file" id="o_imge" style="display: none;">
+                            <img src="" alt="" id="profileO">
+                            <img class="absolute" src="images/nextProfile.jpeg" alt="profile">
+                        </label>
+                    </div>
+
+                    <div class="info">
+                        <input placeholder="Enter your username ..." type="text" id="usernameO">
+                        <input placeholder="Enter your email ..." type="email" id="emailO">
+                        <input placeholder="Enter your password ..." type="password" id="passwordO">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button onclick="submit_register()" id="register_submit">submit</button>
+    </div>
+
+    <script src="js/register.js"></script>
+    <script>
+        // PROFILE X
+        function XX() {
+            document.querySelector("#x_imge").addEventListener("change", function () {
+                const reader = new FileReader();
+
+                reader.addEventListener("load", () => {
+                    localStorage.setItem("profileX", reader.result);
+                    let getprofileX = localStorage.getItem("profileX");
+                    document.querySelector("#profileX").setAttribute("src", getprofileX);
+                })
+
+                reader.readAsDataURL(this.files[0]);
+            })
+        }
+
+        // PROFILE O
+        function OO() {
+            document.querySelector("#o_imge").addEventListener("change", function () {
+                const reader2 = new FileReader();
+
+                reader2.addEventListener("load", () => {
+                    localStorage.setItem("profileO", reader2.result);
+                    let getprofileO = localStorage.getItem("profileO");
+                    document.querySelector("#profileO").setAttribute("src", getprofileO);
+                })
+
+                reader2.readAsDataURL(this.files[0]);
+            })
+        }
+    </script>
+</body>
+
+</html>

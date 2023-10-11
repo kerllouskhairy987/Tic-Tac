@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login | page</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/register.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+    <div class="header" style=" ">
+        <a href="index.html">
+            <h3>Tic<span>Tac</span></h3>
+        </a>
+        <div class="sign">
+            <a href="register.html" id="signUp">SignUp</a>
+            <a href="login.html" id="signIn">SignIn</a>
+        </div>
+    </div>
+    <div class="content_register">
+        <div class="overlay_register">
+            <div class="xplayer">
+                <h2><span>X</span> player</h2>
+                <div class="content_info">
+
+                    <div class="info">
+                        <input placeholder="Enter your email ..." type="email" id="emailX">
+                        <input placeholder="Enter your password ..." type="password" id="passwordX">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="oplayer">
+                <h2><span>O</span> player</h2>
+                <div class="content_info">
+
+                    <div class="info">
+                        <input placeholder="Enter your email ..." type="email" id="emailO">
+                        <input placeholder="Enter your password ..." type="password" id="passwordO">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button onclick="submit_login()" id="register_submit">submit</button>
+    </div>
+
+    <script src="js/login.js"></script>
+</body>
+
+</html>
